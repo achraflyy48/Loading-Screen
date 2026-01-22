@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Screen Animation</title>
+</head>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+    .loading {
+        max-width: 50%;
+        line-height: 1.4;
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-align: center;
+    }
+    .loading_author {
+        font-weight: normal;
+        font-size: 1.5rem;
+        color: rgba(189, 189, 189, 1);
+        margin: 0.6rem 0 2rem 0;
+        display: block;
+    }
+    .loading_anim {
+        width: 35px;
+        height: 35px;
+        display: inline-block;
+        border: 5px solid rgba(189, 189, 189, 0.25);
+        border-top-color: rgba(180, 20, 20, 1);
+        border-left-color: rgba(180, 20, 20, 1);
+        border-radius: 50%;
+        animation: rotate 1000ms infinite linear;
+    }
+    @keyframes rotate {
+        to {
+            transform: rotate(1turn);
+        }
+    }
+</style>
+<body>
+    <section class="loading">
+        <h1>For new sidebar colors, click your workspace name, then Preferences > Sidebar > Theme</h1>
+        <span class="loading_author">- Your Friend At Slack</span>
+        <span class="loading_anim"></span>
+    </section>
+</body>
+</html>
